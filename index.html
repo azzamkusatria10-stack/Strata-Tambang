@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strata – Hal yang Perlu Kamu Tahu tentang Pertambangan</title>
+<meta name="description" content="Panduan ringkas dan akurat tentang pertambangan: siklus tambang, metode, komoditas Indonesia, K3, teknologi, dan reklamasi.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f4f3;--surf:#fff;--ink:#1d2b2e;--mut:#55656a;--line:#d3dad8;--acc:#0e7c66;--acc2:#2d5ba8;--hero:#e4e9e7}
+:root[data-theme=dark]{--bg:#141c1f;--surf:#1c2629;--ink:#e6ecea;--mut:#9fb0b4;--line:#2d3b3f;--acc:#3fc9a8;--acc2:#7aa5ee;--hero:#192326}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#141c1f;--surf:#1c2629;--ink:#e6ecea;--mut:#9fb0b4;--line:#2d3b3f;--acc:#3fc9a8;--acc2:#7aa5ee;--hero:#192326}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.sans,nav,button,summary{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+a{color:var(--acc)}
+:focus-visible{outline:3px solid var(--acc2);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font-weight:800;font-size:1.15rem;margin-right:auto}
+nav a{text-decoration:none;color:var(--mut);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.tg{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:.9rem}
+section{padding:76px 0 8px}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;letter-spacing:-.02em;font-weight:800;margin-bottom:12px}
+.lead{color:var(--mut);max-width:62ch;margin-bottom:30px}
+/* hero */
+.hero{background:var(--hero);border-bottom:1px solid var(--line);padding:56px 0 0}
+.hero h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1;letter-spacing:-.035em;font-weight:800;max-width:15ch}
+.hero p{max-width:56ch;color:var(--mut);margin:18px 0 34px}
+.cross{display:grid;grid-template-columns:64px 1fr;gap:0 14px;align-items:stretch}
+.depth{display:flex;flex-direction:column;justify-content:space-between;font:500 .8rem "Bricolage Grotesque",sans-serif;color:var(--mut);padding:6px 0;text-align:right}
+.strata{display:flex;flex-direction:column;border-radius:10px 10px 0 0;overflow:hidden;border:1px solid var(--line);border-bottom:0}
+.layer{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 18px;color:#fff;font:700 1rem "Bricolage Grotesque",sans-serif;transition:flex-grow .35s ease;flex:1 1 0;min-height:44px}
+.layer span{font-weight:500;font-size:.85rem;opacity:.85}
+.layer[aria-expanded=true]{flex-grow:3.2}
+.layer:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+.l1{background:#6b7f4e}.l2{background:#9a8466}.l3{background:#7a6a58}.l4{background:#2b2f31}.l5{background:#34607a}.l6{background:#0e7c66}
+.info{padding:18px 0 28px;min-height:96px;color:var(--ink);max-width:70ch}
+.info b{font-family:"Bricolage Grotesque",sans-serif}
+/* siklus */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tabs button{border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer;font-weight:500;font-size:.95rem}
+.tabs button[aria-selected=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.panel{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:26px 28px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.panel h3{font-size:1.5rem;margin-bottom:8px}
+.panel ul{padding-left:20px;color:var(--mut)}
+.panel li{margin-bottom:6px}
+.out{border-left:3px solid var(--acc);padding-left:16px;color:var(--mut)}
+.out b{display:block;color:var(--ink);font-family:"Bricolage Grotesque",sans-serif}
+/* metode */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surf)}
+.cols>div{padding:26px;border-right:1px solid var(--line)}
+.cols>div:last-child{border:0}
+.cols h3{font-size:1.25rem;margin-bottom:6px}
+.cols small{display:block;color:var(--acc);font:600 .85rem "Bricolage Grotesque",sans-serif;margin-bottom:10px}
+.cols p{color:var(--mut);font-size:.98rem}
+/* komoditas */
+.com{display:grid;gap:0;border-top:1px solid var(--line)}
+.com div{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.com b{font:700 1.15rem "Bricolage Grotesque",sans-serif}
+.com span{color:var(--mut)}
+.note{font-size:.88rem;color:var(--mut);margin-top:14px}
+/* k3 + tech */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:26px}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card li{margin:0 0 8px 18px;color:var(--mut)}
+.card li b{color:var(--ink)}
+/* glosarium */
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--acc);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mut);margin-top:8px;max-width:68ch}
+footer{margin-top:90px;border-top:1px solid var(--line);padding:34px 0 50px;color:var(--mut);font-size:.92rem}
+@media(max-width:760px){body{font-size:17px}.panel,.cols,.two{grid-template-columns:1fr}.cols>div{border-right:0;border-bottom:1px solid var(--line)}.com div{grid-template-columns:1fr;gap:2px}.cross{grid-template-columns:48px 1fr}.layer span{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<b>Strata</b><a href="#siklus">Siklus</a><a href="#metode">Metode</a><a href="#komoditas">Komoditas</a><a href="#k3">K3</a><a href="#teknologi">Teknologi</a><a href="#glosarium">Glosarium</a>
+<button class="tg" id="tg" aria-label="Ganti tema">Tema</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>Apa yang ada di bawah kaki kita, dan bagaimana kita mengelolanya.</h1>
+<p>Pertambangan menyediakan bahan baku hampir semua yang kita pakai, dari baja gedung sampai baterai ponsel. Pelajari lapisan buminya, siklus kerjanya, dan tanggung jawab di balik setiap ton yang diambil. Ketuk tiap lapisan di bawah.</p>
+<div class="cross">
+<div class="depth" aria-hidden="true"><span>0 m</span><span>…</span><span>kedalaman</span></div>
+<div class="strata" id="strata">
+<button class="layer l1" aria-expanded="false" data-t="Tanah pucuk (topsoil)">Tanah pucuk <span>0–1 m</span></button>
+<button class="layer l2" aria-expanded="false" data-t="Tanah penutup (overburden)">Tanah penutup <span>puluhan meter</span></button>
+<button class="layer l3" aria-expanded="false" data-t="Zona lapukan dan batuan samping">Batuan samping <span>variatif</span></button>
+<button class="layer l4" aria-expanded="false" data-t="Lapisan batubara (seam)">Lapisan batubara <span>seam</span></button>
+<button class="layer l5" aria-expanded="false" data-t="Batuan dasar">Batuan dasar <span>basement</span></button>
+<button class="layer l6" aria-expanded="false" data-t="Badan bijih (ore body)">Badan bijih <span>ore body</span></button>
+</div></div>
+<div class="info" id="info" aria-live="polite">Pilih satu lapisan untuk melihat perannya.</div>
+</div></header>
+
+<main class="wrap">
+<section id="siklus">
+<h2>Siklus hidup tambang</h2>
+<p class="lead">Tambang bukan sekadar menggali. Ia proyek puluhan tahun yang dimulai jauh sebelum alat berat datang dan berakhir lama setelah produksi berhenti.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<section id="metode">
+<h2>Tiga cara utama menambang</h2>
+<p class="lead">Pilihan metode ditentukan oleh kedalaman, bentuk, dan nilai endapan, lalu diuji secara teknis dan ekonomi.</p>
+<div class="cols">
+<div><small>Dekat permukaan</small><h3>Tambang terbuka</h3><p>Lapisan penutup dikupas, lalu mineral diambil dari bukaan yang disusun berjenjang (bench). Cocok untuk endapan dangkal dan luas. Kestabilan lereng jadi perhatian utama. Contoh: open pit dan strip mining.</p></div>
+<div><small>Jauh di bawah tanah</small><h3>Tambang bawah tanah</h3><p>Akses lewat shaft, decline, atau adit. Gangguan permukaan lebih kecil, tetapi biaya, ventilasi, dan penyanggaan jauh lebih menuntut. Contoh: room and pillar, sublevel stoping, block caving.</p></div>
+<div><small>Lepas pantai dan aluvial</small><h3>Tambang semprot dan keruk</h3><p>Endapan aluvial dan placer, misalnya timah, diambil dengan kapal keruk atau monitor air. Pengelolaan sedimen dan air jadi inti pengendalian dampak.</p></div>
+</div>
+</section>
+
+<section id="komoditas">
+<h2>Komoditas penting Indonesia</h2>
+<p class="lead">Letak di Cincin Api dan kawasan tropis membuat Indonesia kaya berbagai jenis endapan.</p>
+<div class="com">
+<div><b>Batubara</b><span>Sumber energi dan bahan baku industri, terutama di Kalimantan dan Sumatra Selatan.</span></div>
+<div><b>Nikel</b><span>Bahan baja nirkarat dan baterai kendaraan listrik. Cadangan laterit besar di Sulawesi dan Maluku Utara; hilirisasi menjadi kebijakan utama.</span></div>
+<div><b>Tembaga dan emas</b><span>Endapan porfiri di kawasan Papua dan Nusa Tenggara, penting untuk kabel, elektronik, dan energi terbarukan.</span></div>
+<div><b>Timah</b><span>Bangka Belitung adalah salah satu pusat timah dunia, dipakai untuk solder dan elektronik.</span></div>
+<div><b>Bauksit</b><span>Bahan baku alumina dan aluminium, banyak di Kalimantan Barat dan Kepulauan Riau.</span></div>
+</div>
+<p class="note">Data produksi dan cadangan berubah tiap tahun. Untuk angka terbaru, rujuk Kementerian ESDM dan Badan Geologi.</p>
+</section>
+
+<section id="k3">
+<h2>Keselamatan dan tanggung jawab</h2>
+<p class="lead">Tambang yang baik menghitung keselamatan dan lingkungan sebagai bagian dari desain, bukan tambahan.</p>
+<div class="two">
+<div class="card"><h3>Keselamatan kerja</h3><ul>
+<li><b>Hierarki pengendalian:</b> hilangkan bahaya dulu, APD adalah pertahanan terakhir.</li>
+<li><b>Lereng dan jenjang:</b> pemantauan geoteknik mencegah longsor.</li>
+<li><b>Ventilasi dan gas:</b> kunci keselamatan tambang bawah tanah.</li>
+<li><b>Kepala Teknik Tambang:</b> penanggung jawab teknis dan keselamatan di lokasi.</li></ul></div>
+<div class="card"><h3>Lingkungan dan masyarakat</h3><ul>
+<li><b>Good Mining Practice:</b> pedoman kaidah pertambangan yang baik dari ESDM.</li>
+<li><b>Pengelolaan air asam tambang:</b> mencegah dan menetralkan limpasan asam.</li>
+<li><b>Reklamasi dan pascatambang:</b> dana jaminan dan rencana sejak awal.</li>
+<li><b>Pemberdayaan masyarakat:</b> program berkelanjutan bagi warga sekitar.</li></ul></div>
+</div>
+</section>
+
+<section id="teknologi">
+<h2>Teknologi yang mengubah tambang</h2>
+<p class="lead">Otomasi dan data membuat tambang lebih aman dan efisien, dan menuntut insinyur yang paham keduanya: batuan dan algoritma.</p>
+<div class="two">
+<div class="card"><h3>Di lapangan</h3><ul>
+<li><b>Truk dan bor otonom</b> mengurangi orang di zona risiko.</li>
+<li><b>Drone dan fotogrametri</b> untuk survei volume dan pemantauan lereng.</li>
+<li><b>Fleet management system</b> mengatur alat berdasarkan data GPS waktu nyata.</li></ul></div>
+<div class="card"><h3>Di balik layar</h3><ul>
+<li><b>Pemodelan 3D dan digital twin</b> untuk perencanaan dan simulasi.</li>
+<li><b>Pembelajaran mesin</b> pada prediksi kerusakan alat dan kadar bijih.</li>
+<li><b>Energi terbarukan</b> untuk menekan emisi operasional.</li></ul></div>
+</div>
+</section>
+
+<section id="glosarium">
+<h2>Glosarium cepat</h2>
+<p class="lead">Istilah yang sering muncul di mata kuliah dan lapangan.</p>
+<details><summary>Stripping ratio</summary><p>Perbandingan volume tanah penutup yang harus dikupas terhadap tonase batubara atau bijih yang didapat. Makin kecil, makin ekonomis.</p></details>
+<details><summary>Cut-off grade</summary><p>Kadar minimum yang masih layak ditambang dan diolah secara ekonomis. Di bawahnya material dianggap limbah.</p></details>
+<details><summary>Sumberdaya dan cadangan</summary><p>Sumberdaya adalah endapan yang punya prospek ekonomi. Cadangan adalah bagian yang telah terbukti layak secara teknis, ekonomis, hukum, dan lingkungan.</p></details>
+<details><summary>Blasting</summary><p>Peledakan terkontrol untuk membongkar batuan keras, dirancang agar fragmentasi sesuai dan getaran terkendali.</p></details>
+<details><summary>Faktor keamanan lereng</summary><p>Rasio gaya penahan terhadap gaya penggerak pada lereng. Nilai di atas satu berarti stabil, dengan batas aman yang ditentukan standar.</p></details>
+<details><summary>Beneficiation</summary><p>Proses meningkatkan mutu bijih lewat penghancuran, penggilingan, pemisahan, atau flotasi sebelum peleburan.</p></details>
+</section>
+</main>
+
+<footer><div class="wrap">Strata adalah proyek belajar tentang pertambangan. Konten bersifat edukatif dan bukan pengganti regulasi resmi atau dokumen teknis. Rujuk UU Minerba dan peraturan turunannya untuk acuan hukum.</div></footer>
+
+<script>
+(function(){
+var r=document.documentElement,tg=document.getElementById('tg');
+try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+tg.onclick=function(){var d=r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');var n=d==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}};
+
+var D={
+"Tanah pucuk (topsoil)":"Lapisan paling atas yang kaya humus. Dikupas lebih dulu dan <b>disimpan terpisah</b> karena dipakai lagi saat revegetasi.",
+"Tanah penutup (overburden)":"Material di atas endapan yang harus dibuang untuk membuka akses. Volumenya menentukan <b>stripping ratio</b> dan biaya tambang.",
+"Zona lapukan dan batuan samping":"Batuan di sekitar endapan. Sifat mekaniknya menentukan <b>desain lereng</b> dan penyanggaan.",
+"Lapisan batubara (seam)":"Lapisan sedimen organik yang jadi target penambangan. Ketebalan, kemiringan, dan kualitasnya menentukan metode.",
+"Batuan dasar":"Fondasi geologi di bawahnya. Struktur seperti sesar dan kekar dipetakan karena memengaruhi <b>stabilitas</b>.",
+"Badan bijih (ore body)":"Bagian batuan yang mengandung logam dengan kadar layak ekonomis. Bentuk dan kadarnya dimodelkan dari data pengeboran."};
+var L=document.querySelectorAll('.layer'),info=document.getElementById('info');
+L.forEach(function(b){b.onclick=function(){var open=b.getAttribute('aria-expanded')==='true';L.forEach(function(x){x.setAttribute('aria-expanded','false')});if(!open){b.setAttribute('aria-expanded','true');info.innerHTML='<b>'+b.dataset.t+'.</b> '+D[b.dataset.t]}else info.textContent='Pilih satu lapisan untuk melihat perannya.'}});
+
+var S=[
+["Eksplorasi","Mencari dan mengkarakterisasi endapan.",["Pemetaan geologi dan geokimia","Survei geofisika","Pengeboran dan analisis sampel"],"Estimasi sumberdaya"],
+["Studi kelayakan","Menguji apakah endapan layak dibangun.",["Model blok dan perencanaan tambang","Analisis ekonomi dan risiko","Kajian lingkungan (AMDAL)"],"Cadangan dan keputusan investasi"],
+["Konstruksi","Menyiapkan semua infrastruktur.",["Jalan angkut dan fasilitas","Pembukaan lahan terkelola","Pembangunan pengolahan"],"Tambang siap beroperasi"],
+["Produksi","Menggali, memuat, mengangkut.",["Pengeboran, peledakan, pembongkaran","Pemuatan dan pengangkutan","Pengendalian lereng dan air"],"Material tertambang"],
+["Pengolahan","Meningkatkan mutu produk.",["Penghancuran dan penggilingan","Pemisahan dan pencucian","Pengelolaan limbah dan tailing"],"Produk siap jual"],
+["Reklamasi","Memulihkan lahan sejak masih produksi.",["Penataan lahan dan drainase","Penebaran tanah pucuk","Revegetasi dan pemantauan"],"Lahan produktif kembali"]];
+var tabs=document.getElementById('tabs'),panel=document.getElementById('panel');
+function show(i){[].forEach.call(tabs.children,function(t,j){t.setAttribute('aria-selected',j===i)});var s=S[i];panel.innerHTML='<div><h3>'+s[0]+'</h3><p style="margin-bottom:10px;color:var(--mut)">'+s[1]+'</p><ul>'+s[2].map(function(x){return'<li>'+x+'</li>'}).join('')+'</ul></div><div class="out"><b>Hasil tahap ini</b>'+s[3]+'</div>'}
+S.forEach(function(s,i){var b=document.createElement('button');b.setAttribute('role','tab');b.textContent=(i+1)+'. '+s[0];b.onclick=function(){show(i)};tabs.appendChild(b)});
+show(0);
+})();
+</script>
+</body>
+</html>
